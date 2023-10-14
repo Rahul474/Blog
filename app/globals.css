@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+@layer components {
+  .container {
+    @apply p-2 max-w-[1200px] mx-auto;
+    
+  }
+  .topics{
+    @apply bg-blue-400 px-2 py-1 rounded-sm;
+  } 
+}
+
+.markdown > h1 {
+  font-size: 24px;
+  font-weight: 800;
+  text-decoration: underline;
+  margin: 1em 0;
+}
+
+.markdown code {
+  background-color: lightgray;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+
+.dark .markdown code {
+  background-color: rgb(16 22 25);
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.markdown pre {
+  background-color: lightgray;
+  padding: 7px;
+  margin: 10px 0;
+  border-radius: 7px;
+}
+
+.dark .markdown pre {
+  background-color: rgb(16 22 25);
+  padding: 7px;
+  margin: 10px 0;
+  border-radius: 7px;
+  overflow-y: auto;
+}
+
+.markdown h2 {
+  margin: 1em 0;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: underline;
+}
